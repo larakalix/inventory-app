@@ -1,15 +1,13 @@
-import type { Pagination as TPagination } from "../types/api.type";
+import type { Pagination as TPagination } from "../../types/api.type";
+import { usePagination } from "./use-pagination";
 
 type Props = {
     pagination: TPagination;
     setPage?: (page: number) => void;
 };
 
-export const Pagination = ({
-    pagination: { page, pageSize, totalItems },
-    setPage,
-}: Props) => {
-    const totalPages = Math.ceil(totalItems / pageSize);
+export const Pagination = ({ pagination, setPage }: Props) => {
+    const { page, totalPages, pageNumbers } = usePagination(pagination);
 
     return (
         <ul className="flex justify-center gap-1 text-gray-900">
@@ -34,18 +32,29 @@ export const Pagination = ({
                 </button>
             </li>
 
-            {Array.from({ length: totalPages }, (_, i) => (
-                <li key={i}>
-                    <button
-                        onClick={() => setPage && setPage(i + 1)}
-                        className={`block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50 ${
-                            page === i + 1 ? "bg-indigo-600 hover:bg-indigo-700 text-white" : ""
-                        }`}
+            {pageNumbers.map((item, index) =>
+                typeof item === "number" ? (
+                    <li key={index}>
+                        <button
+                            onClick={() => setPage && setPage(item)}
+                            className={`block size-8 rounded border text-sm font-medium text-center transition-colors ${
+                                page === item
+                                    ? "bg-indigo-600 text-white"
+                                    : "border-gray-200 hover:bg-gray-50"
+                            }`}
+                        >
+                            {item}
+                        </button>
+                    </li>
+                ) : (
+                    <li
+                        key={index}
+                        className="grid size-8 place-content-center text-gray-500"
                     >
-                        {i + 1}
-                    </button>
-                </li>
-            ))}
+                        ...
+                    </li>
+                )
+            )}
 
             <li>
                 <button

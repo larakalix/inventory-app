@@ -1,11 +1,204 @@
 ﻿<inventory>
   <products>
-    <product name="table" price="29.99" qty="4"/>
-    <product name="chair" price="9.99" qty="7"/>
-    <product name="couch" price="50" qty="2"/>
-    <product name="pillow" price="5" qty="1"/>
-    <product name="bed" price="225.00" qty="1"/>
-    <product name="bench" price="29.99" qty="3"/>
-    <product name="stool" price="19.99" qty="5"/>
+    <product name="pantry" price="60.11" qty="5" />
+    <product name="mirror" price="115.49" qty="2" />
+    <product name="chaise" price="48.03" qty="7" />
+    <product name="couch" price="19.75" qty="4" />
+    <product name="rug" price="255.15" qty="1" />
+    <product name="vanity" price="103.42" qty="9" />
+    <product name="hutch" price="114.12" qty="10" />
+    <product name="armchair" price="405.67" qty="1" />
+    <product name="nightstand" price="350.58" qty="6" />
+    <product name="limegreen armchair" price="81.96" qty="6" />
+    <product name="stool" price="50.91" qty="2" />
+    <product name="closet" price="424.51" qty="10" />
+    <product name="cabinet" price="404.53" qty="8" />
+    <product name="navy chaise" price="66.79" qty="7" />
+    <product name="bench" price="278.26" qty="10" />
+    <product name="wardrobe" price="290.79" qty="2" />
+    <product name="green couch" price="332.33" qty="5" />
+    <product name="lightgreen bench" price="428.38" qty="2" />
+    <product name="stand" price="142.60" qty="6" />
+    <product name="indigo nightstand" price="188.24" qty="4" />
+    <product name="lime armchair" price="352.40" qty="2" />
+    <product name="workbench" price="319.31" qty="9" />
+    <product name="darkmagenta mirror" price="85.88" qty="7" />
+    <product name="darkred armchair" price="494.81" qty="9" />
+    <product name="palegreen rug" price="343.88" qty="1" />
+    <product name="cornflowerblue rug" price="411.79" qty="6" />
+    <product name="counter" price="137.53" qty="4" />
+    <product name="bunk bed" price="438.80" qty="6" />
+    <product name="ottoman" price="329.44" qty="7" />
+    <product name="tv unit" price="232.13" qty="5" />
+    <product name="desk" price="127.08" qty="9" />
+    <product name="lightpink chaise" price="135.06" qty="10" />
+    <product name="bar stool" price="449.42" qty="7" />
+    <product name="snow wardrobe" price="113.56" qty="3" />
+    <product name="console table" price="249.29" qty="1" />
+    <product name="lamp" price="80.66" qty="3" />
+    <product name="springgreen bar stool" price="300.22" qty="7" />
+    <product name="lightslategray stand" price="299.96" qty="8" />
+    <product name="footstool" price="129.45" qty="9" />
+    <product name="table" price="341.74" qty="2" />
+    <product name="slategray chaise" price="376.68" qty="6" />
+    <product name="magenta lamp" price="150.28" qty="3" />
+    <product name="recliner" price="6.61" qty="5" />
+    <product name="indigo console table" price="382.17" qty="9" />
+    <product name="darkkhaki stool" price="435.91" qty="5" />
+    <product name="thistle pantry" price="256.29" qty="4" />
+    <product name="dresser" price="190.09" qty="3" />
+    <product name="lightskyblue chaise" price="476.98" qty="9" />
+    <product name="slategray table" price="301.48" qty="8" />
+    <product name="chair" price="60.37" qty="6" />
+    <product name="tv stand" price="123.53" qty="4" />
+    <product name="lime bunk bed" price="473.74" qty="2" />
+    <product name="coffee table" price="408.93" qty="9" />
+    <product name="peachpuff desk" price="68.55" qty="8" />
+    <product name="blanchedalmond vanity" price="86.74" qty="9" />
+    <product name="lightgreen workbench" price="214.45" qty="4" />
+    <product name="cornsilk chaise" price="378.86" qty="4" />
+    <product name="aqua tv stand" price="202.50" qty="6" />
+    <product name="bean bag" price="450.31" qty="8" />
+    <product name="skyblue lamp" price="127.71" qty="2" />
+    <product name="shelf" price="15.41" qty="9" />
+    <product name="gray rug" price="296.28" qty="1" />
+    <product name="bed" price="355.38" qty="1" />
+    <product name="plum rug" price="38.36" qty="1" />
+    <product name="blue shelf" price="40.07" qty="4" />
+    <product name="lightpink armchair" price="336.14" qty="4" />
+    <product name="cyan chaise" price="70.49" qty="10" />
+    <product name="goldenrod bunk bed" price="238.97" qty="8" />
+    <product name="blue hutch" price="99.25" qty="2" />
+    <product name="mediumorchid bar stool" price="180.38" qty="7" />
+    <product name="whitesmoke recliner" price="432.60" qty="1" />
+    <product name="midnightblue tv unit" price="492.16" qty="2" />
+    <product name="pillow" price="204.30" qty="6" />
+    <product name="plum stool" price="128.08" qty="4" />
+    <product name="darkseagreen chaise" price="227.06" qty="7" />
+    <product name="sofa" price="142.88" qty="4" />
+    <product name="darkred bed" price="224.35" qty="9" />
+    <product name="honeydew stool" price="30.04" qty="9" />
+    <product name="black table" price="484.65" qty="4" />
+    <product name="ivory nightstand" price="206.17" qty="8" />
+    <product name="lightcoral ottoman" price="433.00" qty="1" />
+    <product name="hotpink nightstand" price="192.59" qty="7" />
+    <product name="mediumaquamarine cabinet" price="463.63" qty="8" />
+    <product name="rocking chair" price="214.39" qty="9" />
+    <product name="midnightblue coffee table" price="81.62" qty="5" />
+    <product name="papayawhip ottoman" price="484.51" qty="10" />
+    <product name="lightblue chaise" price="35.17" qty="6" />
+    <product name="lightslategray pillow" price="29.82" qty="8" />
+    <product name="lightyellow console table" price="460.10" qty="9" />
+    <product name="limegreen nightstand" price="33.16" qty="9" />
+    <product name="tomato bench" price="426.41" qty="2" />
+    <product name="darkseagreen workbench" price="38.64" qty="4" />
+    <product name="lightsteelblue counter" price="64.34" qty="10" />
+    <product name="darkgreen mirror" price="291.56" qty="1" />
+    <product name="bookcase" price="45.58" qty="10" />
+    <product name="seashell bunk bed" price="263.78" qty="5" />
+    <product name="orchid ottoman" price="336.51" qty="6" />
+    <product name="teal mirror" price="136.48" qty="3" />
+    <product name="darkred tv unit" price="153.50" qty="6" />
+    <product name="firebrick bed" price="9.61" qty="10" />
+    <product name="khaki bunk bed" price="498.07" qty="2" />
+    <product name="olivedrab chaise" price="110.51" qty="5" />
+    <product name="mediumspringgreen desk" price="466.96" qty="2" />
+    <product name="springgreen mirror" price="187.92" qty="3" />
+    <product name="palegreen bean bag" price="417.70" qty="5" />
+    <product name="lavender bookcase" price="492.01" qty="9" />
+    <product name="lightcyan table" price="335.59" qty="9" />
+    <product name="lightblue tv stand" price="466.22" qty="2" />
+    <product name="lightgreen desk" price="135.91" qty="2" />
+    <product name="midnightblue vanity" price="81.95" qty="5" />
+    <product name="wheat workbench" price="109.26" qty="6" />
+    <product name="silver ottoman" price="345.31" qty="5" />
+    <product name="mediumturquoise console table" price="246.82" qty="1" />
+    <product name="snow bench" price="318.97" qty="5" />
+    <product name="maroon couch" price="6.76" qty="3" />
+    <product name="teal pantry" price="490.00" qty="3" />
+    <product name="moccasin bean bag" price="278.08" qty="7" />
+    <product name="seagreen vanity" price="9.79" qty="2" />
+    <product name="navy dresser" price="275.07" qty="6" />
+    <product name="filing cabinet" price="278.50" qty="7" />
+    <product name="tan desk" price="25.71" qty="6" />
+    <product name="mistyrose couch" price="449.97" qty="4" />
+    <product name="snow mirror" price="335.13" qty="6" />
+    <product name="hotpink vanity" price="442.65" qty="7" />
+    <product name="whitesmoke bookcase" price="375.99" qty="4" />
+    <product name="whitesmoke nightstand" price="488.22" qty="3" />
+    <product name="darkorange hutch" price="17.27" qty="6" />
+    <product name="beige hutch" price="402.11" qty="4" />
+    <product name="gainsboro armchair" price="83.80" qty="2" />
+    <product name="indianred stand" price="436.72" qty="8" />
+    <product name="slategray rug" price="103.79" qty="8" />
+    <product name="maroon closet" price="156.07" qty="4" />
+    <product name="lightblue rug" price="16.71" qty="4" />
+    <product name="turquoise counter" price="167.49" qty="2" />
+    <product name="hotpink armchair" price="178.82" qty="9" />
+    <product name="crimson counter" price="341.36" qty="9" />
+    <product name="cyan shelf" price="469.92" qty="2" />
+    <product name="lightyellow cabinet" price="93.39" qty="5" />
+    <product name="goldenrod couch" price="58.66" qty="7" />
+    <product name="darkmagenta closet" price="365.63" qty="6" />
+    <product name="darkslateblue bar stool" price="305.07" qty="9" />
+    <product name="saddlebrown lamp" price="195.67" qty="10" />
+    <product name="bookshelf" price="131.09" qty="7" />
+    <product name="hotpink table" price="262.36" qty="9" />
+    <product name="tomato bookshelf" price="185.29" qty="2" />
+    <product name="darkblue shelf" price="313.46" qty="2" />
+    <product name="violet tv stand" price="256.03" qty="7" />
+    <product name="drawer" price="204.19" qty="5" />
+    <product name="tan vanity" price="68.01" qty="7" />
+    <product name="aqua stand" price="340.27" qty="3" />
+    <product name="lightpink bookcase" price="286.71" qty="7" />
+    <product name="lightcoral vanity" price="417.69" qty="5" />
+    <product name="lightblue rocking chair" price="109.04" qty="10" />
+    <product name="lightseagreen workbench" price="329.08" qty="8" />
+    <product name="darkcyan bean bag" price="223.87" qty="4" />
+    <product name="tomato console table" price="239.23" qty="3" />
+    <product name="linen bench" price="145.47" qty="10" />
+    <product name="goldenrod shelf" price="51.23" qty="4" />
+    <product name="olive tv stand" price="116.20" qty="4" />
+    <product name="darkturquoise dresser" price="17.09" qty="4" />
+    <product name="end table" price="307.58" qty="2" />
+    <product name="lightcyan recliner" price="210.15" qty="10" />
+    <product name="darkslateblue bookshelf" price="360.58" qty="7" />
+    <product name="blanchedalmond coffee table" price="202.83" qty="3" />
+    <product name="antiquewhite tv unit" price="345.37" qty="2" />
+    <product name="salmon bar stool" price="113.33" qty="9" />
+    <product name="olivedrab recliner" price="29.86" qty="4" />
+    <product name="olivedrab lamp" price="230.95" qty="8" />
+    <product name="saddlebrown footstool" price="494.01" qty="10" />
+    <product name="thistle drawer" price="475.27" qty="8" />
+    <product name="midnightblue bookcase" price="408.43" qty="9" />
+    <product name="blueviolet bar stool" price="416.13" qty="9" />
+    <product name="hotpink bean bag" price="449.12" qty="8" />
+    <product name="lightgreen bean bag" price="133.30" qty="4" />
+    <product name="black pantry" price="142.27" qty="9" />
+    <product name="chocolate coffee table" price="315.24" qty="5" />
+    <product name="papayawhip bean bag" price="43.35" qty="5" />
+    <product name="lemonchiffon mirror" price="139.50" qty="6" />
+    <product name="midnightblue chaise" price="44.89" qty="3" />
+    <product name="linen rug" price="194.60" qty="3" />
+    <product name="magenta ottoman" price="36.79" qty="7" />
+    <product name="red shelf" price="273.59" qty="7" />
+    <product name="plum pillow" price="107.38" qty="7" />
+    <product name="rosybrown stand" price="452.90" qty="10" />
+    <product name="rosybrown chair" price="429.08" qty="10" />
+    <product name="darksalmon stand" price="241.10" qty="6" />
+    <product name="snow tv stand" price="377.97" qty="7" />
+    <product name="aqua chaise" price="375.02" qty="9" />
+    <product name="mediumspringgreen workbench" price="449.42" qty="8" />
+    <product name="mistyrose rug" price="140.10" qty="8" />
+    <product name="lawngreen chair" price="197.48" qty="7" />
+    <product name="seagreen nightstand" price="421.05" qty="3" />
+    <product name="green bookcase" price="269.39" qty="7" />
+    <product name="blue filing cabinet" price="284.37" qty="1" />
+    <product name="slateblue bench" price="323.16" qty="3" />
+    <product name="peru recliner" price="94.96" qty="5" />
+    <product name="olive stand" price="167.04" qty="8" />
+    <product name="gold drawer" price="172.06" qty="7" />
+    <product name="saddlebrown armchair" price="377.24" qty="7" />
+    <product name="lavender cabinet" price="418.28" qty="8" />
   </products>
 </inventory>
