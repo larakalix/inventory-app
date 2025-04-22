@@ -4,33 +4,48 @@ import { InventoryTable } from "./table";
 import { Pagination } from "../../ui/pagination";
 import { Select } from "../../ui/select";
 
+const PAGE_SIZES = [
+    { value: "5", label: "5" },
+    { value: "10", label: "10" },
+    { value: "20", label: "20" },
+    { value: "50", label: "50" },
+];
+
 export const ProductInventory = () => {
     return (
         <InventoryProvider>
-            {(data, handlePageChange, handlePageSizeChange) => (
-                <div className="overflow-x-auto rounded border border-gray-300 shadow-sm p-4">
-                    <InventoryTable caption="Products">
-                        {data.data.map((product) => (
-                            <ProductTableRow
-                                key={product.id}
-                                product={product}
-                            />
-                        ))}
-                    </InventoryTable>
+            {(
+                data,
+                handlePageChange,
+                handlePageSizeChange,
+                handleSortChange
+            ) => (
+                <div className="overflow-x-auto rounded border border-gray-300 shadow-sm">
+                    <div className="p-4">
+                        <InventoryTable
+                            caption="Products"
+                            filter={handleSortChange}
+                        >
+                            {data.data.map((product) => (
+                                <ProductTableRow
+                                    key={product.id}
+                                    product={product}
+                                />
+                            ))}
+                        </InventoryTable>
+                    </div>
 
-                    <footer className="flex justify-between items-center">
+                    <footer className="mt-8 border-t border-gray-300 pt-8 flex justify-between items-center p-4">
                         <Select
                             defaultValue={data.pageSize.toString()}
-                            options={[
-                                { value: "5", label: "5" },
-                                { value: "10", label: "10" },
-                                { value: "20", label: "20" },
-                                { value: "50", label: "50" },
-                            ]}
+                            options={PAGE_SIZES}
                             setPage={handlePageSizeChange}
                         />
 
-                        <Pagination pagination={data} setPage={handlePageChange} />
+                        <Pagination
+                            pagination={data}
+                            setPage={handlePageChange}
+                        />
                     </footer>
                 </div>
             )}

@@ -12,7 +12,8 @@ type Props = {
     children: (
         data: ApiResponse<Product[]>,
         handlePageChange?: (page: number) => void,
-        handlePageSizeChange?: (pageSize: number) => void
+        handlePageSizeChange?: (pageSize: number) => void,
+        handleSortChange?: (sortBy: string) => void
     ) => ReactNode;
 };
 
@@ -31,6 +32,10 @@ export const InventoryProvider = ({ children }: Props) => {
         setQuery((prev) => ({ ...prev, page: 1, pageSize }));
     };
 
+    const handleSortChange = (sortBy: string) => {
+        setQuery((prev) => ({ ...prev, sortBy }));
+    };
+
     const {
         data: result,
         isLoading,
@@ -44,5 +49,14 @@ export const InventoryProvider = ({ children }: Props) => {
     if (error) return <Error error={error} />;
     if (!result || !result.data || result.data?.length === 0) return <NoData />;
 
-    return <>{children(result, handlePageChange, handlePageSizeChange)}</>;
+    return (
+        <>
+            {children(
+                result,
+                handlePageChange,
+                handlePageSizeChange,
+                handleSortChange
+            )}
+        </>
+    );
 };
