@@ -1,0 +1,56 @@
+## Build artifacts
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+artifacts/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.*
+*.vscode/
+*.env
+
+## .NET Secrets
+secrets.json
+
+## Rider
+.idea/
+*.sln.iml
+
+## VSCode
+.vscode/
+.history/
+*.code-workspace
+
+## Resharper
+*.DotSettings.user
+_ReSharper*/
+*.sln.DotSettings
+
+## ASP.NET publish
+wwwroot/dist/
+publish/
+**/Properties/launchSettings.json
+
+## Configuration transforms
+*.Transform.*
+*.config.*.local
+
+## Other
+*.db
+*.log
+.env
+.env.*
+
+# Node dependencies (if using frontend assets or React in API project)
+node_modules/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+.vs/
