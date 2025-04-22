@@ -8,19 +8,22 @@ import child_process from "child_process";
 import { env } from "process";
 import tailwindcss from "@tailwindcss/vite";
 
-const baseFolder =
-    env.APPDATA !== undefined && env.APPDATA !== ""
-        ? `${env.APPDATA}/ASP.NET/https`
-        : `${env.HOME}/.aspnet/https`;
+const useHttps = env.USE_HTTPS === "true";
 
-const certificateName = "inventory-app.client";
-const certFilePath = path.join(baseFolder, `${certificateName}.pem`);
-const keyFilePath = path.join(baseFolder, `${certificateName}.key`);
+let https: { key: Buffer; cert: Buffer } | undefined = undefined;
 
-if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
-    if (
-        0 !==
-        child_process.spawnSync(
+if (useHttps) {
+    const baseFolder =
+        env.APPDATA !== undefined && env.APPDATA !== ""
+            ? `${env.APPDATA}/ASP.NET/https`
+            : `${env.HOME}/.aspnet/https`;
+
+    const certificateName = "inventory-app.client";
+    const certFilePath = path.join(baseFolder, `${certificateName}.pem`);
+    const keyFilePath = path.join(baseFolder, `${certificateName}.key`);
+
+    if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
+        const result = child_process.spawnSync(
             "dotnet",
             [
                 "dev-certs",
@@ -32,10 +35,16 @@ if (!fs.existsSync(certFilePath) || !fs.existsSync(keyFilePath)) {
                 "--no-password",
             ],
             { stdio: "inherit" }
-        ).status
-    ) {
-        throw new Error("Could not create certificate.");
+        );
+        if (result.status !== 0) {
+            throw new Error("Could not create certificate.");
+        }
     }
+
+    https = {
+        key: fs.readFileSync(keyFilePath),
+        cert: fs.readFileSync(certFilePath),
+    };
 }
 
 const target = env.ASPNETCORE_HTTPS_PORT
@@ -44,7 +53,6 @@ const target = env.ASPNETCORE_HTTPS_PORT
     ? env.ASPNETCORE_URLS.split(";")[0]
     : "https://localhost:7082";
 
-// https://vitejs.dev/config/
 export default defineConfig({
     plugins: [plugin(), tailwindcss()],
     resolve: {
@@ -53,14 +61,11 @@ export default defineConfig({
         },
     },
     server: {
+        port: 5173,
+        https,
         proxy: {
             "^/weatherforecast": { target, secure: false },
             "^/inventory": { target, secure: false },
-        },
-        port: 5173,
-        https: {
-            key: fs.readFileSync(keyFilePath),
-            cert: fs.readFileSync(certFilePath),
         },
     },
 });
