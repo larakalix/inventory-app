@@ -28,7 +28,7 @@ export const InventoryProvider = ({ children }: Props) => {
     };
 
     const handlePageSizeChange = (pageSize: number) => {
-        setQuery((prev) => ({ ...prev, pageSize }));
+        setQuery((prev) => ({ ...prev, page: 1, pageSize }));
     };
 
     const {

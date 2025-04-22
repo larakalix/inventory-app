@@ -39,7 +39,7 @@ export const Pagination = ({
                     <button
                         onClick={() => setPage && setPage(i + 1)}
                         className={`block size-8 rounded border border-gray-200 text-center text-sm/8 font-medium transition-colors hover:bg-gray-50 ${
-                            page === i + 1 ? "bg-indigo-600 text-white" : ""
+                            page === i + 1 ? "bg-indigo-600 hover:bg-indigo-700 text-white" : ""
                         }`}
                     >
                         {i + 1}
