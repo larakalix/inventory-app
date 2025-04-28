@@ -8,15 +8,15 @@ import child_process from "child_process";
 import { env } from "process";
 import tailwindcss from "@tailwindcss/vite";
 
-const useHttps = env.USE_HTTPS === "true";
+const useHttps = false;
 
 let https: { key: Buffer; cert: Buffer } | undefined = undefined;
 
 if (useHttps) {
     const baseFolder =
         env.APPDATA !== undefined && env.APPDATA !== ""
-            ? `${env.APPDATA}/ASP.NET/https`
-            : `${env.HOME}/.aspnet/https`;
+            ? `${env.APPDATA}/ASP.NET/http`
+            : `${env.HOME}/.aspnet/http`;
 
     const certificateName = "inventory-app.client";
     const certFilePath = path.join(baseFolder, `${certificateName}.pem`);

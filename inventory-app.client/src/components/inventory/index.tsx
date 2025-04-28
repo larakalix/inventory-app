@@ -35,12 +35,14 @@ export const ProductInventory = () => {
                         </InventoryTable>
                     </div>
 
-                    <footer className="mt-8 border-t border-gray-300 pt-8 flex justify-between items-center p-4">
-                        <Select
-                            defaultValue={data.pageSize.toString()}
-                            options={PAGE_SIZES}
-                            setPage={handlePageSizeChange}
-                        />
+                    <footer className="mt-8 border-t border-gray-300 pt-8 flex justify-end items-center p-4">
+                        <div className="hidden">
+                            <Select
+                                defaultValue={data.pageSize.toString()}
+                                options={PAGE_SIZES}
+                                setPage={handlePageSizeChange}
+                            />
+                        </div>
 
                         <Pagination
                             pagination={data}

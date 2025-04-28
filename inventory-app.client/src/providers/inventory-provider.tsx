@@ -33,7 +33,11 @@ export const InventoryProvider = ({ children }: Props) => {
     };
 
     const handleSortChange = (sortBy: string) => {
-        setQuery((prev) => ({ ...prev, sortBy }));
+        setQuery((prev) => {
+            if (prev.sortBy === sortBy) return prev;
+
+            return { ...prev, sortBy, page: 1 };
+        });
     };
 
     const {
